@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>dropdown matiere</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}" >
+</head>
+<body>
+<div class="container" style="margin-top: 200px;">
+  <div class="row">
+    <div class="col-md-5 offset-md-3" style="border: solid black; padding: 50px;">
+      <h1>insertion look et matiere</h1>
+      <form class="form-group" th:action="@{/look_matiere/insert}" th:method="post">
+          <label for="look">look :</label>
+          <select class="form-control" id="look"  name="look">
+              <div th:each="l : ${look}">
+                  <option th:value="${l.getId_look()}" th:text="${l.getNom()}"></option>
+              </div>
+          </select>
+          <label for="matiere">matiere :</label>
+            <select class="form-control" id="matiere" name="matiere">
+                <div th:each="m : ${matiere}">
+                    <option th:value="${m.getId_matiere()}" th:text="${m.getNom()}"></option>
+                </div>
+            </select>
+        <input style="margin-left: 200px; margin-top: 20px;" class="btn btn-success" type="submit" value="inserer">
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

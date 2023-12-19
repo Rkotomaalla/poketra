@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}" >
+</head>
+<body>
+    <center>
+        <div class="container p-4" style="border: solid black; margin-top: 200px;">
+            <div class="row">
+                <a th:href="@{/matiere/pageinsert}">
+                    <h3>insert matiere</h3>
+                </a>
+                <a th:href="@{/look/pageinsert}">
+                    <h3>insert look</h3>
+                </a>
+                <a th:href="@{/look_matiere/page}">
+                    <h3>insert matiere dans look</h3>
+                </a>
+                <a th:href="@{/look/get}">
+                    <h3>list look</h3>
+                </a>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
